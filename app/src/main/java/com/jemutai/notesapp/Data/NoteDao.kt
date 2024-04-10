@@ -14,10 +14,11 @@ interface NoteDao {
    @Delete
    suspend fun  deleteNote(note: Note)
     @Query("SELECT * FROM NOTE ORDER BY dateAdded")
-   suspend fun  getNoteOrderedByDateAdded():Flow<List<Note>>
+    fun getNoteOrderedByDateAdded(): Flow<List<Note>>
+  // suspend fun  getNoteOrderedByDateAdded():Flow<List<Note>>
 
     @Query("SELECT * FROM NOTE ORDER BY title  ASC")
-    suspend fun  getNoteOrderedByTitle():Flow<List<Note>>
+     fun  getNoteOrderedByTitle():Flow<List<Note>>
 
 
 }

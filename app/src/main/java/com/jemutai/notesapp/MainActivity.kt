@@ -20,6 +20,8 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.room.Room
 import com.jemutai.notesapp.Data.NotesDatabase
+import com.jemutai.notesapp.Presentation.AddNoteScreen
+import com.jemutai.notesapp.Presentation.NotesScreen
 import com.jemutai.notesapp.Presentation.NotesViewModel
 import com.jemutai.notesapp.ui.theme.NotesAppTheme
 
