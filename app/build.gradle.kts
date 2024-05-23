@@ -70,19 +70,18 @@ dependencies {
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
 
+    implementation(libs.kotlinx.coroutines.core.v170)
+    implementation(libs.kotlinx.coroutines.android.v170)
+
 
 
 //Navigation
-    implementation ( "androidx.navigation:navigation-compose:2.7.7")
+    implementation ( libs.androidx.navigation.compose)
 
 
     //Room
 
-    val room_version = "2.4.0-alpha02"
-
-    implementation ("androidx.room:room-runtime:$room_version")
-   kapt ("androidx.room:room-compiler:$room_version")
-
-    // If you're using Kotlin Coroutines with Room, include the following dependency:
-    implementation ("androidx.room:room-ktx:$room_version")
+    implementation (libs.androidx.room.runtime)
+    implementation (libs.androidx.room.ktx)
+    kapt(libs.androidx.room.compiler.v261)
 }

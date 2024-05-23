@@ -3,12 +3,12 @@ package com.jemutai.notesapp.Data
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
-@Entity
+@Entity(tableName = "note")
 data class Note(
 
+    @PrimaryKey(autoGenerate = true)
+    val  id: Int = 0,
     val  title:String,
     val  description: String,
-    val  dateAdded:Long,
-    @PrimaryKey(autoGenerate = true)
-    val  id: Int = 0
+    val  dateAdded:Long
 )

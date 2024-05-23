@@ -13,11 +13,13 @@ interface NoteDao {
 
    @Delete
    suspend fun  deleteNote(note: Note)
-    @Query("SELECT * FROM NOTE ORDER BY dateAdded")
+    @Query("SELECT * FROM note ORDER BY dateAdded")
+    @JvmSuppressWildcards
     fun getNoteOrderedByDateAdded(): Flow<List<Note>>
   // suspend fun  getNoteOrderedByDateAdded():Flow<List<Note>>
 
-    @Query("SELECT * FROM NOTE ORDER BY title  ASC")
+    @Query("SELECT * FROM note ORDER BY title  ASC")
+    @JvmSuppressWildcards
      fun  getNoteOrderedByTitle():Flow<List<Note>>
 
 

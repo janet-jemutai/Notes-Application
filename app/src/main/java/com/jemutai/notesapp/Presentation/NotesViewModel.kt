@@ -1,6 +1,5 @@
 package com.jemutai.notesapp.Presentation
 
-import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.jemutai.notesapp.Data.Note
@@ -62,8 +61,8 @@ class NotesViewModel(
                 }
                 _state.update {
                     it.copy(
-                        title = mutableStateOf(""),
-                        description = mutableStateOf("")
+//                        title =MutableStateFlow(""),
+//                        description = MutableStateFlow("")
                     )
                 }
 
